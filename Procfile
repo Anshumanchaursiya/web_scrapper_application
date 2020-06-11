@@ -1,1 +1,1 @@
-web: gunicorn web_scrapper_project.views --log-file -
+web: gunicorn web_scrapper_project.wsgi --log-file -
