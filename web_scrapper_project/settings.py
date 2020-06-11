@@ -25,7 +25,7 @@ SECRET_KEY = '*7^nm8h^lp$pjy%j3lry*hydr4p(1wph2ij27k26+87j6ple92'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['webscrapperapplication.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['mynewscrapperapp.herokuapp.com']
 
 
 # Application definition
