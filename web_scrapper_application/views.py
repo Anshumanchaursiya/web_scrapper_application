@@ -9,8 +9,6 @@ from bs4 import BeautifulSoup
 def base(request):
 	return render(request,'base.html')
 
-def home(request):
-	return render(request,'home.html')
 
 def blog_list(request):
 	if request.method == "POST":
