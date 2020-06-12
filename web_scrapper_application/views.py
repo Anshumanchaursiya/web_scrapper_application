@@ -57,7 +57,7 @@ def blog_list(request):
 	
 		list_detail = [list(a) for a in zip(serial_num,list_title, list_creator,list_data)]
 	else:
-		list_detail = ['*GO BACK TO THE HOMEPAGE AND PLEASE ENTER THE CORRECT TAG*']
+		list_detail = ['*GO BACK TO THE HOMEPAGE AND PLEASE INPUT THE CORRECT TAG*']
 
 	return render(request,'blog_list.html',{'list_detail':list_detail})
 
