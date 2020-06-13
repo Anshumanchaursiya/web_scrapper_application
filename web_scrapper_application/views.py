@@ -28,7 +28,6 @@ def blog_list(request):
 	
 		tot_date = soup.find_all('span', {'itemprop':"datePublished"})
 	
-	
 		list_title = []
 		list_creator = []
 		list_response = []
