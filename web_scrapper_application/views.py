@@ -33,20 +33,26 @@ def blog_list(request):
 		list_response = []
 		list_data = []
 	
-	
-	
-		for i in range(10):
+		k = len(tot_response)
+		print(k)
+
+		if k<10:
+			row = k
+		else:
+			row	= 10
+
+		for i in range(row):
 			list_title.append(tot_title[i].text)
 	
-		for i in range(11):
+		for i in range(row+1):
 			list_creator.append(tot_creator[i].text)
 	
 		list_creator.pop(0)
 	
-		for i in range(10):
+		for i in range(row):
 			list_response.append(tot_response[i].text)
 	
-		for i in range(10):
+		for i in range(row):
 			list_data.append(tot_date[i].text)
 	
 	
