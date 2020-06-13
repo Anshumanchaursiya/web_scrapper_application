@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +18,19 @@
 	
 	<p></p>
     <form method="post" action="{% url 'blog_list' %}">{% csrf_token %}
-    	<input type="text" name="myvalue">
+    	<input list="browsers" type="text" name="myvalue">
+    	<datalist id="browsers">
+    		<option value="social-media">
+    		<option value="content-marketing">
+    		<option value="email-marketing">
+    		<option value="project-management">
+    		<option value="workflow">
+    		<option value="analytics">
+    		<option value="product">
+    		<option value="customer-marketing">
+    		<option value="thought-leadership">
+    	</datalist>
+    		
     		
     	<input type="submit" value="submit">
     	
