@@ -16,20 +16,23 @@
 </style>
 	<center>
 	
-	<p></p>
+	<br>
+	<br>
     <form method="post" action="{% url 'blog_list' %}">{% csrf_token %}
-    	<input list="browsers" type="text" name="myvalue">
-    	<datalist id="browsers">
-    		<option value="social-media">
-    		<option value="content-marketing">
-    		<option value="email-marketing">
-    		<option value="project-management">
-    		<option value="workflow">
-    		<option value="analytics">
-    		<option value="product">
-    		<option value="customer-marketing">
-    		<option value="">
-    	</datalist>
+    	<label><b>Select catagory: </b><select list="browsers" type="text" name="myvalue">
+    		<option>content-marketing</option>
+    		<option>social-media</option>
+    		<option>email-marketing</option>
+    		<option>project-management</option>
+    		<option>workflow</option>
+    		<option>analytics</option>
+    		<option>product</option>
+    		<option>customer-marketing</option>
+    		<option>thought-leadership</option>
+    	
+    	</select>
+    	
+    	</label>
     		
     		
     	<input type="submit" value="submit">
@@ -41,7 +44,7 @@
         
     
     </div>
-    <h5> Pleae click on the searh bar and select any one tags </h5>
+    
 	
 
 	</center>
