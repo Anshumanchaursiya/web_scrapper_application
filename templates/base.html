@@ -1,66 +1,69 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>Web scrapper</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js" ></script>
 </head>
 <body>
 	<h2>Welcome to the Homepage!!!</h2>
 	<br>
-	<h4>About:</h4>	
-	<h6> - This scrapper Application is crawling "https://coschedule.com/blog/content-gap-analysis-template/" Blog website and tag is related to CATEGORIES in this website </h6>
-	<style>
-  .bottom-three {
-     margin-bottom: 30cm;
-  }
-</style>
-	<center>
+	<div class="Homepage">
+		<b> About:</b>	
+		 - This scrapper Application is crawling "https://coschedule.com/blog/content-gap-analysis-template/" Blog website and tag is related to CATEGORIES in this website 
+		
+  
 	
-	<br>
-	<br>
-    <form method="post" action="{% url 'blog_list' %}">{% csrf_token %}
-    	<label><b>Select catagory: </b><select list="browsers" type="text" name="myvalue">
-    		<option>content-marketing</option>
-    		<option>social-media</option>
-    		<option>email-marketing</option>
-    		<option>project-management</option>
-    		<option>workflow</option>
-    		<option>analytics</option>
-    		<option>product</option>
-    		<option>customer-marketing</option>
-    		<option>thought-leadership</option>
-    	
-    	</select>
-    	
-    	</label>
-    		
-    		
-    	<input type="submit" value="submit">
+		<center>
+	
+			<br>
+			<br>
+			<br>
+			<div class='wrapper'>
+	    		<form method="post" action="{% url 'blog_list' %}">{% csrf_token %}
+	    		<label><b>Select catagory: </b><select list="browsers" type="text" name="myvalue">
+		    		<div class="dropdown">
+			    		<option>content-marketing</option>
+			    		<option>social-media</option>
+			    		<option>email-marketing</option>
+			    		<option>project-management</option>
+			    		<option>workflow</option>
+			    		<option>analytics</option>
+			    		<option>product</option>
+			    		<option>customer-marketing</option>
+			    		<option>thought-leadership</option>
+			    	</div>
+		    		</select>
+	    	
+	    		</label>
+	    		
+	    		
+	    		<input type="submit" value="submit">
     	
 
-    </form>
+    			</form>       
     
-        	
-        
-    
-    </div>
+    		</div>
     
 	
 
-	</center>
-    <div >
-    	<spacer type="vertical" width="200" height="500" >  </spacer>
-    	<br>
-    	<br>
+		</center>
+	    	<br>
+	    	<br>
+	    	<br>
+	    	<br>
+	    	<br>
 
-    <div>
-    	<h4>NOTE:</h4>
-    	<h6> - It will show top ten blogs if number of blogs of perticular tag is >=10. If number of blog is less than 10 then it will show all the blog detail.</h6>
-    </div>
+	    <div>
+	    	<b> Note:</b>
+	    	 - It will show top ten blogs if number of blogs of perticular tag is >=10. If number of blog is less than 10 then it will show all the blog detail.
+	    </div>
         
  
  
-</div>
+	</div>
     
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

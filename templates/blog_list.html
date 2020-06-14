@@ -1,36 +1,44 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>top 10 blogs</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-    
+    <div class="back_to_home">
     <a href="{% url 'base' %}" class="btn btn-danger">Back to Home</a>
-        	
+    </div>    	
 
     
-    <div class="container">
+    <div >
         <div class="row">
             <div >
                     <h3 class="text-centre"></h3>
                     <br>
-                    <h8> <b> - ['serial','title','creator','date'] <---Format </b> </h8>
-                    <br>
+                    <div class="format">
+                    <h8> <b> - ['serial','title','creator','date'] <---Format
+
+                     </b> </h8>
+                    </div>
+                    
+                    <div class="container">
                     {% for blog in list_detail %}
                     
-                    <h7> -  {{blog}} </h7>
+                    <h7>  -  {{blog}} </h7>
                     <hr>
                     {% endfor %}
-                    <br>
+                    
+                    </div>
             </div>
 
-
-            
         </div>
+            
+    </div>
  
  
-</div>
+
 
     
 </body>
