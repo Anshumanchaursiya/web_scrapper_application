@@ -8,44 +8,43 @@
     <script src="https://kit.fontawesome.com/b99e675b6e.js" ></script>
 </head>
 <body>
-	<h2>*Welcome to the Homepage!!!</h2>
+	<div class="back_to_home">
+    <a href="{% url 'base' %}" class="btn btn-danger">Back to Home</a>
+    </div> 
+    <br>
+	<center><h4>Web scrapper</h4></center>
 	<br>
 	<div class="Homepage">
 		<b> About:</b>	
 		 - This scrapper Application is crawling "https://coschedule.com/blog/content-gap-analysis-template/" Blog website and tag is related to CATEGORIES in this website 
-		
-  
-	
+		<br>
+		<br>
+		<b>Tags:</b>
+		 -	content-marketing, 
+    		social-media, 
+    		email-marketing, 
+    		project-management, 
+    		workflow, 
+    		analytics, 
+    		product, 
+    		customer-marketing, 
+    		thought-leadership
 		<center>
 	
 			<br>
 			<br>
 			<br>
-			<div class='wrapper'>
-	    		<form method="post" action="{% url 'blog_list' %}">{% csrf_token %}
-	    		<label><b>Select catagory: </b><select list="browsers" type="text" name="myvalue">
-		    		<div class="dropdown">
-			    		<option>content-marketing</option>
-			    		<option>social-media</option>
-			    		<option>email-marketing</option>
-			    		<option>project-management</option>
-			    		<option>workflow</option>
-			    		<option>analytics</option>
-			    		<option>product</option>
-			    		<option>customer-marketing</option>
-			    		<option>thought-leadership</option>
-			    	</div>
-		    		</select>
-	    	
-	    		</label>
-	    		
-	    		
-	    		<input type="submit" value="submit">
-    	
+			<ul class='wrapper'>
+		    	<li id="search">
+	        		<form method="post" action="{% url 'blog_list' %}">{% csrf_token %}
+	            		<input type="text" name="myvalue" id="myvalue" placeholder="Enter the tag"/>
+	            		<input type="submit" name="submit" id="submit">
+	        		</form>
+	    		</li>   
 
-    			</form>       
-    
-    		</div>
+	    		   
+
+    		</ul>
     
 	
 
@@ -56,19 +55,30 @@
 	    	<br>
 	    	<br>
 
-	    <div>
-	    	<b> Note:</b>
-	    	 - It will show top ten blogs if number of blogs of perticular tag is >=10. If number of blog is less than 10 then it will show all the blog detail.
-	    </div>
-        
  
  
 	</div>
-    
+	
+        <div class="">
+            <div class="container">
+                    <script type="text/javascript">
+                    	document.write(list_detail)
+                    </script>
+                    {% for blog in list_detail %}
+                    <br>
+                    <h7> {{blog}}  </h7>
 
+                    {% endfor %}
+                    
+                    
+            </div>
+
+        </div>
+            
+    
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    
 </body>
 </html>
