@@ -58,7 +58,7 @@ def blog_list(request):
 	
 		serial_num = ['blog->1','blog->2','blog->3','blog->4','blog->5','blog->6','blog->7','blog->8','blog->9','blog->10']
 	
-		list_detail = [list(a) for a in zip(serial_num,list_title, list_creator,list_data)]
+		list_detail = [list(a) for a in zip(list_title, list_creator,list_data)]
 	else:
 		list_detail = ['PLEASE INPUT THE CORRECT TAG']
 

@@ -38,7 +38,7 @@
 		    	<li id="search">
 	        		<form method="post" action="{% url 'blog_list' %}">{% csrf_token %}
 	            		<input type="text" name="myvalue" id="myvalue" placeholder="Enter the tag"/>
-	            		<input type="submit" name="submit" id="submit">
+	            		<input type="submit" name="submit" id="submit" >
 	        		</form>
 	    		</li>   
 
@@ -61,15 +61,58 @@
 	
         <div class="">
             <div class="container">
-                    <script type="text/javascript">
-                    	document.write(list_detail)
-                    </script>
-                    {% for blog in list_detail %}
-                    <br>
-                    <h7> {{blog}}  </h7>
-
-                    {% endfor %}
                     
+                    <script type="text/javascript"> 
+                    	function timer(ms) {
+							 return new Promise(res => setTimeout(res, ms));
+						}
+
+
+                    	var i=0,j=0;
+                    	var a = [];
+                    	{% for blog in list_detail %}
+   							a[i] = "{{blog}}";
+   							i = i+1;
+   							j=1;
+
+   							
+   						{% endfor %}
+
+
+   						
+   						function doSomething (i,t)
+						{
+							
+
+							array = a[i].split(",");
+							document.write("Title:   " + array[0]);
+							document.write("<br>");
+							document.write("Created by:   " + array[1]);
+							document.write("<br>");
+							document.write("Created on:   " + array[2]);
+							document.write("<br>"+t/1000+"sec"+"<br>");
+						  	document.write("<br>");
+						  	document.write("<br>");
+
+						}
+						
+						
+   						async function load () { 
+						  for (var i = 0; i < a.length; i++) {
+						    var t = Math.floor(Math.random() * 8);
+						    await timer(t*130);
+
+						    doSomething(i,t*120); 
+						  }
+						}
+						if(j==1)
+							load();
+   										
+   						
+
+					</script>
+
+                  
                     
             </div>
 
