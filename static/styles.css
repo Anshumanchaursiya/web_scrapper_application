@@ -21,6 +21,9 @@ body{
 
 }
 
+.wrapper{
+	width: 100%;
+}
 
 .back_to_home{
 	position: absolute;
