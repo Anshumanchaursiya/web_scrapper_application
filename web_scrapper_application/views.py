@@ -60,7 +60,7 @@ def blog_list(request):
 	
 		list_detail = [list(a) for a in zip(list_title, list_creator,list_data)]
 	else:
-		list_detail = ['PLEASE INPUT THE CORRECT TAG']
+		list_detail = ['*PLEASE INPUT THE CORRECT TAG']
 
 	return render(request,'base.html',{'list_detail':list_detail})
 

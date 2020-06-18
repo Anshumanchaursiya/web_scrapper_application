@@ -83,13 +83,15 @@
    						function doSomething (i,t)
 						{
 							
-
+							var title = "Titile: ";
+							var created_by = "Created by: ";
+							var created_on = "Created on: ";
 							array = a[i].split(",");
-							document.write("Title:   " + array[0]);
+							document.write(title.bold() + array[0]);
 							document.write("<br>");
-							document.write("Created by:   " + array[1]);
+							document.write(created_by.bold() + array[1]);
 							document.write("<br>");
-							document.write("Created on:   " + array[2]);
+							document.write(created_on.bold() + array[2]);
 							document.write("<br>"+t/1000+"sec"+"<br>");
 						  	document.write("<br>");
 						  	document.write("<br>");
@@ -105,9 +107,12 @@
 						    doSomething(i,t*250); 
 						  }
 						}
-						if(j==1)
+						if(j==1 && a.length!=1)
 							load();
-   										
+   						
+   						if(a.length==1){
+   							document.write(a[0].bold());
+   						}
    						
 
 					</script>
